@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Sidebar from './components/SideBar/Sidebar';
 
+// url for api : https://exchangeratesapi.io/documentation/
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container flex bg-[#101120]'>
+      <Router>
+        <Sidebar />
+        <Routes>
+          <Route index element={<Dashboard />} />
+        </Routes>
+      </Router>
+    
     </div>
   );
 }
