@@ -1,9 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   font-family: 'Poppins';
 }
 
 body{
   background-color: #101120;
+}
+
+.log{
+  font-family: 'Parchment';
+}
+
+.mobile-nav{
+  box-shadow: 5px 5px 5px #101120,
+             -8px -8px 16px #c9c9c9e2;
 }
 
 
@@ -14,7 +27,3 @@ body{
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
